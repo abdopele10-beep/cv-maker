@@ -1,0 +1,893 @@
+/* ====== أساسيات ====== */
+.page-title {
+    font-size: 32px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #ffffff, #a5b4fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-sub {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+.form-section {
+    padding: 40px 0 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.form-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 24px;
+    padding: 45px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin: 35px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(99, 102, 241, 0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 16px;
+    border: 2px solid rgba(99, 102, 241, 0.2);
+    border-radius: 12px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 15px;
+    transition: all 0.3s;
+    background: rgba(15, 23, 42, 0.5);
+    color: white;
+    box-sizing: border-box;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #64748b;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+    background: rgba(15, 23, 42, 0.8);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+/* select */
+#fieldSelect, #citySelect, .edu-degree, .edu-major, .edu-school {
+    width: 100%;
+    padding: 13px 16px;
+    border: 2px solid rgba(99, 102, 241, 0.2);
+    border-radius: 12px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 15px;
+    background: rgba(15, 23, 42, 0.5);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+#fieldSelect:focus, #citySelect:focus, .edu-degree:focus, .edu-major:focus, .edu-school:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+#fieldSelect option, #citySelect option, .edu-degree option, .edu-major option, .edu-school option {
+    background: #1e293b;
+    color: white;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+/* اللغة */
+.lang-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.lang-btn {
+    padding: 10px 22px;
+    border: 2px solid rgba(99, 102, 241, 0.3);
+    background: rgba(15, 23, 42, 0.5);
+    color: #cbd5e1;
+    border-radius: 12px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.lang-btn:hover {
+    border-color: #6366f1;
+    color: white;
+}
+
+.lang-btn.active {
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    color: white;
+    border-color: transparent;
+}
+
+/* القوالب */
+.template-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.template-option {
+    border: 2px solid rgba(99, 102, 241, 0.2);
+    border-radius: 14px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: rgba(15, 23, 42, 0.5);
+    text-align: center;
+}
+
+.template-option:hover {
+    border-color: #6366f1;
+    transform: translateY(-3px);
+}
+
+.template-option.active {
+    border-color: #6366f1;
+    background: rgba(99, 102, 241, 0.15);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.template-option p {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 8px 0 0;
+    color: #cbd5e1;
+}
+
+.template-option.active p {
+    color: white;
+}
+
+.t-preview {
+    height: 70px;
+    border-radius: 8px;
+}
+
+.t-classic { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+.t-sidebar { background: linear-gradient(135deg, #1e3a5f, #3b82f6); }
+.t-professional { background: linear-gradient(135deg, #93c5fd, #bfdbfe); }
+
+/* الصورة */
+.photo-upload input[type="file"] {
+    display: none;
+}
+
+.photo-label {
+    display: block;
+    padding: 18px;
+    border: 2px dashed rgba(99, 102, 241, 0.4);
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(15, 23, 42, 0.5);
+    transition: all 0.3s;
+    color: #a5b4fc;
+    font-weight: 600;
+}
+
+.photo-label:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: #6366f1;
+}
+
+.photo-preview {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.photo-preview img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #6366f1;
+}
+
+/* النبذة المقفولة */
+.locked-note {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #fca5a5;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* الخبرة والتعليم */
+.experience-item,
+.education-item {
+    background: rgba(15, 23, 42, 0.6);
+    padding: 22px;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    border-right: 4px solid #6366f1;
+    position: relative;
+}
+
+.btn-remove {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.btn-remove:hover {
+    background: #ef4444;
+    color: white;
+}
+
+.btn-add {
+    background: rgba(99, 102, 241, 0.1);
+    color: #a5b4fc;
+    border: 2px dashed rgba(99, 102, 241, 0.4);
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.btn-add:hover {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: #6366f1;
+    color: white;
+}
+
+/* المهارات */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2));
+    color: #a5b4fc;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.skill-tag button {
+    background: none;
+    border: none;
+    color: #ec4899;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* الاقتراحات */
+.suggestions-label {
+    font-size: 13px;
+    color: #94a3b8;
+    margin: 15px 0 10px;
+    font-weight: 600;
+}
+
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.sugg-btn {
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    color: #a5b4fc;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sugg-btn:hover {
+    background: rgba(99, 102, 241, 0.25);
+    border-color: #6366f1;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.sugg-btn:active {
+    transform: scale(0.95);
+}
+
+.sugg-btn.added {
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    color: white;
+    border-color: transparent;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.sugg-summary {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* الأزرار */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.btn-preview {
+    font-size: 17px;
+    padding: 16px 45px;
+}
+
+.download-note {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* المعاينة */
+.preview-section {
+    padding: 40px 0 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.preview-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.cv-output {
+    background: white;
+    max-width: 850px;
+    margin: 0 auto 30px;
+    border-radius: 15px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    color: #1e293b;
+}
+
+/* CV النهائي */
+.cv-final {
+    font-family: 'Cairo', sans-serif;
+    color: #1e293b;
+    line-height: 1.7;
+    position: relative;
+    z-index: 2;
+    background: white;
+}
+
+/* العلامة المائية */
+.cv-watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.watermark-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    text-align: center;
+    opacity: 0.08;
+}
+
+.wm-logo {
+    font-size: 90px;
+    margin-bottom: 10px;
+}
+
+.wm-name {
+    font-size: 55px;
+    font-weight: 900;
+    color: #6366f1;
+    letter-spacing: 4px;
+}
+
+.wm-site {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ec4899;
+}
+
+.cv-watermark::before,
+.cv-watermark::after {
+    content: 'Abdelrhman';
+    position: absolute;
+    font-size: 20px;
+    font-weight: 700;
+    color: #6366f1;
+    opacity: 0.18;
+    letter-spacing: 2px;
+}
+
+.cv-watermark::before {
+    top: 20px;
+    right: 20px;
+    transform: rotate(15deg);
+}
+
+.cv-watermark::after {
+    bottom: 20px;
+    left: 20px;
+    transform: rotate(-15deg);
+}
+
+/* ====== القالب الكلاسيكي ====== */
+.template-classic {
+    padding: 45px 50px;
+    background: white;
+    font-family: 'Cairo', sans-serif;
+    color: #1e293b;
+}
+
+.cv-classic-header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #1e293b;
+    margin-bottom: 25px;
+}
+
+.cv-classic-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 5px;
+    letter-spacing: 0.5px;
+}
+
+.cv-classic-job {
+    font-size: 14px;
+    color: #475569;
+    font-weight: 500;
+    margin: 0 0 12px;
+    letter-spacing: 1px;
+}
+
+.cv-classic-contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: #1e293b;
+}
+
+.cv-classic-contact span:not(:last-child)::after {
+    content: '|';
+    margin-right: 12px;
+    color: #cbd5e1;
+}
+
+.cv-classic-section {
+    margin-bottom: 25px;
+}
+
+.cv-classic-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 15px;
+    padding-bottom: 5px;
+    border-bottom: 1.5px solid #1e293b;
+}
+
+.cv-classic-summary {
+    font-size: 13.5px;
+    color: #334155;
+    line-height: 1.7;
+    margin: 0;
+    text-align: justify;
+}
+
+.cv-classic-exp-item,
+.cv-classic-edu-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 18px;
+    align-items: flex-start;
+}
+
+.cv-classic-exp-date,
+.cv-classic-edu-date {
+    width: 120px;
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.cv-classic-exp-info,
+.cv-classic-edu-info {
+    flex: 1;
+}
+
+.cv-classic-exp-info h3,
+.cv-classic-edu-info h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 3px;
+}
+
+.cv-classic-exp-company {
+    font-size: 13px;
+    color: #475569;
+    margin: 0 0 8px;
+    font-style: italic;
+}
+
+.cv-classic-edu-info p {
+    font-size: 13px;
+    color: #475569;
+    margin: 0;
+}
+
+.cv-classic-desc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cv-classic-desc-list li {
+    font-size: 13px;
+    color: #334155;
+    line-height: 1.6;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.cv-classic-desc-list li::before {
+    content: '–';
+    position: absolute;
+    right: 0;
+    color: #1e293b;
+}
+
+.cv-classic-skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px 30px;
+}
+
+.cv-classic-skills-list li {
+    font-size: 13px;
+    color: #334155;
+    padding-right: 15px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.cv-classic-skills-list li::before {
+    content: '–';
+    position: absolute;
+    right: 0;
+    color: #1e293b;
+}
+
+@media (max-width: 600px) {
+    .template-classic { padding: 25px 20px; }
+    .cv-classic-header h1 { font-size: 22px; }
+    .cv-classic-exp-item,
+    .cv-classic-edu-item { flex-direction: column; gap: 5px; }
+    .cv-classic-exp-date,
+    .cv-classic-edu-date { width: auto; }
+    .cv-classic-skills-list { grid-template-columns: 1fr; }
+}
+
+.cv-sidebar-name {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.cv-sidebar-job {
+    font-size: 13px;
+    color: #93c5fd;
+    margin-bottom: 25px;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.cv-sidebar-section {
+    text-align: right;
+    margin-bottom: 25px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.cv-sidebar-section h3 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #60a5fa;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.cv-sidebar-section p {
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #e0e7ff;
+    word-break: break-word;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.cv-main-content {
+    padding: 40px 30px;
+    background: white;
+}
+
+.cv-main-section {
+    margin-bottom: 30px;
+}
+
+.cv-main-section h3 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #1e3a5f;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #3b82f6;
+    margin-bottom: 15px;
+}
+
+.cv-main-item {
+    margin-bottom: 15px;
+}
+
+.cv-main-item h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e3a5f;
+    margin-bottom: 3px;
+}
+
+.cv-main-company {
+    font-size: 13px;
+    color: #3b82f6;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.cv-main-item p {
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* قالب الاحترافي */
+.template-professional {
+    padding: 30px;
+}
+
+.cv-prof-header {
+    text-align: right;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.cv-prof-header h1 {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.cv-prof-job {
+    font-size: 14px;
+    color: #64748b;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.cv-prof-top {
+    background: #bfdbfe;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.cv-prof-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    flex-shrink: 0;
+}
+
+.cv-prof-summary {
+    flex: 1;
+    text-align: right;
+}
+
+.cv-prof-summary h3 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #1e3a5f;
+    margin-bottom: 10px;
+}
+
+.cv-prof-summary p {
+    font-size: 13px;
+    color: #334155;
+    line-height: 1.7;
+}
+
+.cv-prof-body {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 30px;
+}
+
+.cv-prof-side-section {
+    margin-bottom: 25px;
+    text-align: right;
+}
+
+.cv-prof-side-section h3 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #1e3a5f;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #bfdbfe;
+    margin-bottom: 12px;
+}
+
+.cv-prof-side-section p {
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+.cv-prof-side-section strong {
+    color: #1e3a5f;
+    font-weight: 700;
+}
+
+.cv-prof-main-section h3 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #1e3a5f;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #bfdbfe;
+    margin-bottom: 15px;
+}
+
+.cv-prof-item {
+    margin-bottom: 20px;
+    padding-right: 15px;
+    border-right: 3px solid #3b82f6;
+    text-align: right;
+}
+
+.cv-prof-date {
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.cv-prof-item h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e3a5f;
+    margin: 4px 0;
+}
+
+.cv-prof-company {
+    font-size: 13px;
+    color: #3b82f6;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.cv-prof-item p {
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* الموبايل */
+@media (max-width: 700px) {
+    .form-wrapper { padding: 25px 20px; }
+    .form-row { grid-template-columns: 1fr; }
+    .template-options { grid-template-columns: 1fr; }
+    .cv-sidebar-layout { grid-template-columns: 1fr; }
+    .cv-prof-body { grid-template-columns: 1fr; }
+    .cv-prof-top { flex-direction: column; text-align: center; }
+    .cv-prof-summary { text-align: center; }
+    .wm-name { font-size: 35px; }
+    .wm-site { font-size: 20px; }
+    .page-title { font-size: 24px; }
+}

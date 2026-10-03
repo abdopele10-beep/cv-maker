@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء CV - CV بسرعة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="create.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo" id="logo">
+                <span class="logo-icon">📄</span>
+                <h1>CV بسرعة</h1>
+            </div>
+            <nav>
+                <a href="index.html">الرئيسية</a>
+                <a href="index.html#templates">القوالب</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="formSection" class="form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                
+                <h2 class="page-title">اعمل سيرتك الذاتية</h2>
+                <p class="page-sub">املأ البيانات وشوف النتيجة مباشرة</p>
+
+                <!-- اللغة -->
+                <div class="form-group">
+                    <label>🌍 لغة السيرة الذاتية</label>
+                    <div class="lang-options">
+                        <button type="button" class="lang-btn active" data-lang="ar">🇸🇦 عربي</button>
+                        <button type="button" class="lang-btn" data-lang="en">🇬🇧 English</button>
+                        <button type="button" class="lang-btn" data-lang="de">🇩🇪 Deutsch</button>
+                    </div>
+                </div>
+
+                <!-- القوالب -->
+                <div class="form-group">
+                    <label>🎨 قالب السيرة الذاتية</label>
+                    <div class="template-options">
+                        <div class="template-option active" data-template="classic">
+                            <div class="t-preview t-classic"></div>
+                            <p>الكلاسيكي</p>
+                        </div>
+                        <div class="template-option" data-template="sidebar">
+                            <div class="t-preview t-sidebar"></div>
+                            <p>السايدبار</p>
+                        </div>
+                        <div class="template-option" data-template="professional">
+                            <div class="t-preview t-professional"></div>
+                            <p>الاحترافي</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- المجال -->
+                <div class="form-group">
+                    <label>🎯 مجالك (لاقتراحات تلقائية)</label>
+                    <select id="fieldSelect">
+                        <option value="">-- اختار مجالك --</option>
+                        <option value="accounting">محاسبة ومالية</option>
+                        <option value="engineering">هندسة</option>
+                        <option value="it">برمجة وتقنية</option>
+                        <option value="teaching">تعليم وتدريس</option>
+                        <option value="marketing">تسويق ومبيعات</option>
+                        <option value="design">تصميم وفنون</option>
+                        <option value="medicine">طب وتمريض</option>
+                        <option value="management">إدارة وموارد بشرية</option>
+                        <option value="hospitality">ضيافة وسياحة</option>
+                        <option value="other">مجال آخر</option>
+                    </select>
+                </div>
+
+                <!-- البيانات الشخصية -->
+                <h3 class="form-title">👤 البيانات الشخصية</h3>
+
+                <div class="form-group">
+                    <label>📷 صورة شخصية (اختياري)</label>
+                    <div class="photo-upload">
+                        <input type="file" id="photoInput" accept="image/*">
+                        <label for="photoInput" class="photo-label">
+                            <span id="photoText">اضغط لاختيار صورة</span>
+                        </label>
+                        <div id="photoPreview" class="photo-preview"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>الاسم الكامل *</label>
+                        <input type="text" id="fullName" placeholder="مثال: أحمد محمد علي">
+                    </div>
+                    <div class="form-group">
+                        <label>المسمى الوظيفي</label>
+                        <input type="text" id="jobTitle" placeholder="مثال: مهندس برمجيات">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>البريد الإلكتروني *</label>
+                        <input type="email" id="email" placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>رقم الهاتف *</label>
+                        <input type="tel" id="phone" placeholder="+20 123 456 7890">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>المدينة</label>
+                        <select id="citySelect">
+                            <option value="">-- اختار مدينتك --</option>
+                            <optgroup label="🇪🇬 مصر">
+                                <option value="القاهرة">القاهرة</option>
+                                <option value="الجيزة">الجيزة</option>
+                                <option value="الإسكندرية">الإسكندرية</option>
+                                <option value="المنصورة">المنصورة</option>
+                                <option value="طنطا">طنطا</option>
+                                <option value="أسيوط">أسيوط</option>
+                                <option value="بورسعيد">بورسعيد</option>
+                                <option value="السويس">السويس</option>
+                                <option value="الأقصر">الأقصر</option>
+                                <option value="أسوان">أسوان</option>
+                            </optgroup>
+                            <optgroup label="🇸🇦 السعودية">
+                                <option value="الرياض">الرياض</option>
+                                <option value="جدة">جدة</option>
+                                <option value="الدمام">الدمام</option>
+                                <option value="مكة">مكة</option>
+                                <option value="المدينة">المدينة</option>
+                            </optgroup>
+                            <optgroup label="🇦🇪 الإمارات">
+                                <option value="دبي">دبي</option>
+                                <option value="أبوظبي">أبوظبي</option>
+                                <option value="الشارقة">الشارقة</option>
+                            </optgroup>
+                            <optgroup label="🇰🇼 الكويت">
+                                <option value="الكويت">الكويت</option>
+                            </optgroup>
+                            <optgroup label="🇶🇦 قطر">
+                                <option value="الدوحة">الدوحة</option>
+                            </optgroup>
+                            <optgroup label="🌍 أخرى">
+                                <option value="أخرى">أخرى</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>الموقع الإلكتروني</label>
+                        <input type="url" id="website" placeholder="https://...">
+                    </div>
+                </div>
+
+                <!-- النبذة -->
+                <div class="form-group" id="summarySection" style="display:none;">
+                    <label>نبذة عنك</label>
+                    <textarea id="summary" rows="4" placeholder="اكتب نبذة مختصرة..."></textarea>
+                </div>
+                <p id="summaryLocked" class="locked-note">🔒 النبذة التلقائية متاحة في النسخة المدفوعة فقط</p>
+
+                <!-- الخبرة -->
+                <h3 class="form-title">💼 الخبرة العملية</h3>
+                <div id="experienceContainer"></div>
+                <button type="button" class="btn-add" id="addExpBtn">+ إضافة خبرة</button>
+
+                <!-- التعليم -->
+                <h3 class="form-title">🎓 التعليم</h3>
+                <div id="educationContainer"></div>
+                <button type="button" class="btn-add" id="addEduBtn">+ إضافة تعليم</button>
+
+                <!-- المهارات -->
+                <h3 class="form-title">⚡ المهارات</h3>
+                <div class="form-group">
+                    <label>اكتب مهارة واضغط Enter</label>
+                    <input type="text" id="skillInput" placeholder="مثال: JavaScript">
+                    <div id="skillsList" class="skills-list"></div>
+                    <div class="suggestions-label">أو اختار من الاقتراحات:</div>
+                    <div class="suggestions" id="skillsSuggestions"></div>
+                </div>
+
+                <!-- اللغات -->
+                <h3 class="form-title">🌐 اللغات</h3>
+                <div class="form-group">
+                    <label>اكتب لغة واضغط Enter</label>
+                    <input type="text" id="langInput" placeholder="مثال: الإنجليزية">
+                    <div id="langsList" class="skills-list"></div>
+                    <div class="suggestions-label">أو اختار من الاقتراحات:</div>
+                    <div class="suggestions" id="langsSuggestions"></div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-primary btn-preview" id="previewBtn">
+                        👁️ معاينة CV
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="previewSection" class="preview-section" style="display:none;">
+        <div class="container">
+            <h2 class="preview-title">معاينة سيرتك الذاتية</h2>
+            <div id="cvPreview" class="cv-output"></div>
+            <div class="form-actions">
+                <button type="button" class="btn-secondary" id="backBtn">← رجوع للتعديل</button>
+                <button type="button" class="btn-primary" id="downloadBtn">📥 تحميل PDF</button>
+            </div>
+            <p class="download-note" id="downloadNote"></p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="create.js"></script>
+</body>
+</html>
